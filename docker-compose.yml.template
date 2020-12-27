@@ -2,7 +2,7 @@ version: '2'
 
 services:
   dnsmasq-service:
-    image: andyshinn/dnsmasq:latest
+    image: suhail94/rb-dnsmasq:latest
     container_name: dnsmasq
     privileged: true
     network_mode: host
@@ -13,7 +13,7 @@ services:
     restart: always
 
   dnsmasq-bogus-service:
-    image: andyshinn/dnsmasq:latest
+    image: suhail94/rb-dnsmasq:latest
     container_name: dnsmasq-bogus
     privileged: true
     network_mode: host
@@ -23,7 +23,7 @@ services:
     restart: always
 
   caddy-service:
-    image: abiosoft/caddy:latest
+    image: suhail94/rb-caddy:latest
     container_name: caddy
     privileged: true
     network_mode: host
@@ -35,7 +35,7 @@ services:
     restart: always
   
   sniproxy-service:
-    image: ab77/sniproxy:latest
+    image: suhail94/rb-sniproxy:latest
     container_name: sniproxy
     build:
       context: docker-sniproxy
