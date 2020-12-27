@@ -51,7 +51,8 @@ if [ ${c} ]; then CLIENTIP=${c}; fi
 
 log_action_begin_msg "checking OS compatibility"
 if [[ $(cat /etc/os-release | grep '^ID=') =~ ubuntu ]]\
-  || [[ $(cat /etc/os-release | grep '^ID=') =~ debian ]]; then
+  || [[ $(cat /etc/os-release | grep '^ID=') =~ debian ]]\
+  || [[ $(cat /etc/os-release | grep '^ID=') =~ raspbian ]]; then
     true
     log_action_end_msg $?
 else
